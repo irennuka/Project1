@@ -9,6 +9,10 @@ module.exports = function(grunt) {
                'target/main.js': ['src/js/main.js']
             }
           }
+    },
+
+    watch: {
+        files: ['**/*'],
     }
   });
 
@@ -26,5 +30,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'watch']);
 };
