@@ -9,22 +9,6 @@ module.exports = function(grunt) {
           }
     },
 
-    cssmin: {
-        target: {
-            files: {
-                'target/main.css': ['src/css/main.css']
-            }
-        }
-    },
-
-    htmlmin: {
-        target: {
-          files: {
-            'target/main.html': 'src/html/main.html'
-          }
-        }
-     },
-
     watch: {
         files: ['**/*'],
     }
@@ -44,5 +28,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin', 'watch']);
+  grunt.registerTask('default', ['uglify','watch']);
 };
